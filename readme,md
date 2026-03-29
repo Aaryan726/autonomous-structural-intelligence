@@ -1,0 +1,49 @@
+# 🏗️ Autonomous Structural Intelligence System
+
+An AI-powered floor plan analyzer built for hackathon.
+
+## 🚀 What It Does
+- Upload any floor plan image
+- Automatically detects rooms, walls, and layout using OpenCV
+- Highlights detected structures with color-coded boxes
+- Recommends building materials (Brick, Steel, Glass, Concrete, etc.)
+- Explains WHY each material is recommended
+- Generates downloadable analysis report
+
+## 🛠️ Tech Stack
+- Python 3.13
+- Streamlit (Web UI)
+- OpenCV (Image Processing)
+- NumPy (Array Operations)
+- Pillow (Image Handling)
+
+## ⚙️ How to Run
+
+### 1. Install Dependencies
+pip install -r requirements.txt
+
+### 2. Run the App
+cd structural_intelligence
+streamlit run app.py
+
+### 3. Open Browser
+Go to: http://localhost:8501
+
+## 📁 Project Structure
+structural_intelligence/
+├── app.py               # Main Streamlit application
+├── requirements.txt     # Dependencies
+├── utils/
+│   ├── detector.py      # OpenCV image processing
+│   └── recommender.py   # Material recommendation logic
+└── sample_images/       # Test floor plan images
+
+## 🔍 How It Works
+1. User uploads a floor plan image
+2. OpenCV converts to grayscale → applies edge detection → finds contours
+3. Contours are filtered by area to identify rooms/walls
+4. Material recommendations are generated based on detected structure size
+5. Results displayed visually with annotated image + material report
+
+## 👨‍💻 Built By
+[Aaryan choudhary,smriti behura ] — prompt hackathon 2026
